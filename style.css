@@ -1,0 +1,182 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    cursor: default;
+}
+
+
+body
+{
+    background: linear-gradient(to right,rgb(0, 0, 0) 4%, rgb(0, 119, 255), rgb(0, 0, 0) 96% )
+}
+
+
+#calculadora
+{
+    display: grid;
+    grid-template: auto 80px 80px 80px 80px 80px / 80px 80px 80px 80px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+ #mostrador
+ {
+    grid-column-end: 5;
+    grid-column-start: 1;
+    color: black;
+    background-color: rgba(175, 172, 172, 0.699);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px ;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 10px;
+    min-height: 67px;
+ }
+
+
+ #numerosClicados
+ {
+    font-weight: bolder;
+    font-size: 2rem;
+    height: 100%;
+    width: 100%;
+    text-align: end;
+ }
+
+
+ button
+ {
+    background-color: rgba(0, 0, 0, 0.699);
+    color: white;
+    border-style: none;
+    padding: 20px;
+    cursor: pointer;
+ }
+
+
+ button:hover{
+    background-color: black;
+    transition: 300ms;
+ }
+
+
+ button:active
+ {
+    background-color: rgba(0, 0, 0, 0.699) ;
+    transition: 1ms;
+ }
+ 
+
+ [data-limparUm], [data-limparTudo]
+ {
+     font-size: 0.7rem;
+     padding-left: 14px;
+ }
+
+
+ [data-fazerConta]
+ {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-color: black;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px ;
+ }
+
+
+ [data-fazerConta]:active
+ {
+    background-color: black;
+ }
+
+
+ #zero
+ {
+    grid-column-end: span 2;
+ }
+
+
+ @media screen and (max-width: 800px)
+ {
+    button:hover{
+        background-color: rgba(0, 0, 0, 0.699);
+        transition: 1ms;
+     }
+
+
+     button:active
+     {
+        background-color: black ;
+        transition: 10ms;
+     }
+
+
+     [data-fazerConta]:active
+     {
+       background-color: black;
+       transition: 1ms;
+     }
+    
+     
+     [data-fazerConta]:hover
+     {
+       background-color: black;
+       transition: 1ms;
+     }
+ 
+     
+}
+
+
+ 
+ @media screen and (max-width: 410px)
+ {
+    #calculadora
+    {
+         grid-template: auto  70px 70px 70px 70px / 70px 70px 70px 70px;
+    }
+
+
+    [data-limparUm], [data-limparTudo]
+    {
+        font-size: 0.7rem;
+        text-align: center;
+        font-weight: bold;
+        padding-left: 10px;
+    }
+ }
+
+
+ @media screen and (max-width: 300px)
+ {
+    #calculadora
+    {
+         grid-template: auto 48px 48px 48px 48px 48px / 48px 48px 48px 48px;
+    }
+
+
+    [data-limparUm], [data-limparTudo]
+    {
+        font-size: 0.5rem;
+        text-align: center;
+        font-weight: bold;
+        padding-left: 4px;
+    }
+
+    *
+    {
+        font-size: 1.2rem;
+    }
+
+  
+
+    
+ }
